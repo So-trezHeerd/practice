@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoormRailsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+		<% if user_signed_in? %>
+			<%= link_to "회원정보", edit_user_registration_path %>
+			<%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
+		<% else %>
+			<%= link_to "로그인", user_session_path %>
+			<%= link_to "회원가입", "/users/sign_up" %>
+		<% end %>
+	</div>
+	<hr/>
+	<%= alert %>
+	<%= notice %>
+	<h2 style="font-weight: bold">마이 와디즈</h2>
+	<% if user_signed_in? %>
+		<div>
+			유저 No. : <%= current_user.id %><br>
+			<%= current_user.nickname %> 님<br>
+		</div>
+	  <form>
+		  <td><%= link_to '서포터', homes_path(current_user.id) %></td>
+		  <td><%= link_to '메이커', sellers_show_seller_path(current_user.id) %></td>
+		  <td><%= link_to '펀딩 상품', funding_products_path(current_user.id) %></td>
+	  </form>
+	<% else %>
+	<% end %>
+
+    <%= yield %>
+  </body>
+</html>

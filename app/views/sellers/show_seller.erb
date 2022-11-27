@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+	메이커 페이지 채우고 <br><br>
+	더 많은 기회를 얻으세요
+</h1>
+
+<p>
+	<strong>기본 정보 입력하기</strong>
+</p>
+
+<p>
+  <strong>사업자 등록번호</strong>
+  <%= @sellers.registration_num %>
+</p>
+
+<p>
+	<strong>상호/법인명</strong>
+	<%= @sellers.company_name %>
+</p>
+
+<p>
+	<strong>대표자명</strong>
+	<%= @sellers.ceo_name %>
+</p>
+
+<p>
+	<strong>소재지</strong>
+	<%= @sellers.company_address %>
+</p>
+
+<p>
+	<strong>대표 이메일</strong>
+	<%= @sellers.ceo_email %>
+</p>
+
+<p>
+	<strong>대표 번호</strong>
+	<%= @sellers.ceo_num %>
+</p>
+
+<%= link_to 'Edit', edit_seller_path(@seller) %> |
+<%= link_to 'Back', sellers_path %>

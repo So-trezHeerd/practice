@@ -1,0 +1,65 @@
+<%= form_with(model: funding_product, local: true) do |form| %>
+  <% if funding_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(funding_product.errors.count, "error") %> prohibited this funding_product from being saved:</h2>
+
+      <ul>
+      <% funding_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.text_field :category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deadline %>
+    <%= form.text_field :deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :achieve_rate %>
+    <%= form.number_field :achieve_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :achieve_money %>
+    <%= form.number_field :achieve_money %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supporters_number %>
+    <%= form.number_field :supporters_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_detail %>
+    <%= form.text_field :product_detail %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

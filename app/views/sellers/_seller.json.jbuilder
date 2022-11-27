@@ -1,0 +1,2 @@
+json.extract! seller, :id, :seller_id, :user_id, :registration_num, :company_name, :ceo_name, :company_address, :ceo_email, :ceo_num, :created_at, :updated_at
+json.url seller_url(seller, format: :json)

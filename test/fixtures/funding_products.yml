@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: MyString
+  seller_id: 
+  category_id: 
+  title: MyString
+  deadline: MyString
+  achieve_rate: 1
+  achieve_money: 1
+  supporters_number: 1
+  brand: MyString
+  product_detail: MyString
+
+two:
+  product_id: MyString
+  seller_id: 
+  category_id: 
+  title: MyString
+  deadline: MyString
+  achieve_rate: 1
+  achieve_money: 1
+  supporters_number: 1
+  brand: MyString
+  product_detail: MyString

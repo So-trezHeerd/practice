@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @funding_product.product_id %>
+</p>
+
+<p>
+  <strong>Seller:</strong>
+  <%= @funding_product.seller_id %>
+</p
+
+
+
+
+<p>
+  <strong>Category:</strong>
+  <%= @funding_product.category_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @funding_product.title %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @funding_product.deadline %>
+</p>
+
+<p>
+  <strong>Achieve rate:</strong>
+  <%= @funding_product.achieve_rate %>
+</p>
+
+<p>
+  <strong>Achieve money:</strong>
+  <%= @funding_product.achieve_money %>
+</p>
+
+<p>
+  <strong>Supporters number:</strong>
+  <%= @funding_product.supporters_number %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @funding_product.brand %>
+</p>
+
+<p>
+  <strong>Product detail:</strong>
+  <%= @funding_product.product_detail %>
+</p>
+
+<%= link_to 'Edit', edit_funding_product_path(@funding_product) %> |
+<%= link_to 'Back', funding_products_path %>
