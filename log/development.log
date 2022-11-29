@@ -24191,3 +24191,86 @@ Processing by FundingProductsController#index as HTML
 Completed 200 OK in 80ms (Views: 79.0ms | ActiveRecord: 0.3ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <main> at /workspace/wa4/app/models/application_record.rb:1)
+Started GET "/?t=1669741408151" for 172.17.0.1 at 2022-11-29 17:03:28 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Parameters: {"t"=>"1669741408151"}
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.2ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:9
+  Rendered homes/index.html.erb within layouts/application (2.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 101ms (Views: 93.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/funding_products/1" for 172.17.0.1 at 2022-11-29 17:03:31 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FundingProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFundingProduct Load (0.1ms)[0m  [1m[34mSELECT  "funding_products".* FROM "funding_products" WHERE "funding_products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/funding_products_controller.rb:63
+  Rendering funding_products/show.html.erb within layouts/application
+  Rendered funding_products/show.html.erb within layouts/application (0.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 86ms (Views: 69.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/funding_products" for 172.17.0.1 at 2022-11-29 17:03:33 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FundingProductsController#index as HTML
+  Rendering funding_products/index.html.erb within layouts/application
+  [1m[36mFundingProduct Load (0.3ms)[0m  [1m[34mSELECT "funding_products".* FROM "funding_products"[0m
+  ↳ app/views/funding_products/index.html.erb:16
+  Rendered funding_products/index.html.erb within layouts/application (4.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homes" for 172.17.0.1 at 2022-11-29 17:03:36 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.1ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:9
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/funding_products" for 172.17.0.1 at 2022-11-29 17:03:39 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FundingProductsController#index as HTML
+  Rendering funding_products/index.html.erb within layouts/application
+  [1m[36mFundingProduct Load (0.2ms)[0m  [1m[34mSELECT "funding_products".* FROM "funding_products"[0m
+  ↳ app/views/funding_products/index.html.erb:16
+  Rendered funding_products/index.html.erb within layouts/application (2.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
