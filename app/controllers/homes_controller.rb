@@ -9,6 +9,9 @@ class HomesController < ApplicationController
   # GET /homes/1 or /homes/1.json
   def show
   end
+	
+  def supporterpage
+  end
 
   # GET /homes/new
   def new
@@ -18,8 +21,6 @@ class HomesController < ApplicationController
   # GET /homes/1/edit
   def edit
   end
-	
-  
 
   # POST /homes or /homes.json
   def create

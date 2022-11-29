@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: MyString
+  id: one
+  product: MyString
+  id: one
+
+two:
+  user: MyString
+  id: two
+  product: MyString
+  id: two

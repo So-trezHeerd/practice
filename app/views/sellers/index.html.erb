@@ -28,7 +28,7 @@
         <td><%= seller.company_address %></td>
         <td><%= seller.ceo_email %></td>
         <td><%= seller.ceo_num %></td>
-		<td><%= link_to seller.sellers.registration_num sellers_show_seller_path(seller.seller_id) %></td>
+		
         <td><%= link_to 'Show', seller %></td>
         <td><%= link_to 'Edit', edit_seller_path(seller) %></td>
         <td><%= link_to 'Destroy', seller, method: :delete, data: { confirm: 'Are you sure?' } %></td>

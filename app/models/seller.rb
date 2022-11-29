@@ -1,5 +1,4 @@
 class Seller < ApplicationRecord
   belongs_to :user
-	
-	belongs_to :funding_product
+	has_many :funding_products
 end

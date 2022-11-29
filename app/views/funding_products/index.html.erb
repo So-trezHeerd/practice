@@ -1,37 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Funding Products</h1>
+<h1>펀딩 홈</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Product</th>
-	  <th>Seller</th>
-      <th>Category</th>
       <th>Title</th>
-      <th>Deadline</th>
-      <th>Achieve rate</th>
-      <th>Achieve money</th>
-      <th>Supporters number</th>
-      <th>Brand</th>
-      <th>Product detail</th>
+	  <th>Category</th>
+	  <th>Brand</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @funding_products.each do |funding_product| %>
+	  <div class="MainCard">
+		  <div class="MainCard_info">
+			  <img src="/orange.png"></img>
+		      <p class="MainCard_title">
+				  <strong>[일년 중 딱 한달]상큼달콤 꿀즙 가득 탱꿀탱꿀 충주 레드탄금향</strong>
+		      </p>
+		  </div>
+	  </div>
+	  <div>
+		  <span class="product_category">푸드</span>
+		  <span class="product_brand">주식회사 왕귤</span>
+      </div>
+      <div>
+		  <span class="achieve_rate">10978%</span>
+		  <span class="achieve_money">67,887,390원</span>
+		  <span class="deadline">
+			  <span class="deadline_day">4일</span>
+			  <span class="deadline_daytext">남음</span>
+		  </span>
+      </div>
+	  
       <tr>
-        <td><%= funding_product.product_id %></td>
-		<td><%= funding_product.seller_id %></td>
-        <td><%= funding_product.category_id %></td>
         <td><%= funding_product.title %></td>
-        <td><%= funding_product.deadline %></td>
+		<td><%= funding_product.category_id %></td>
+		<td><%= funding_product.brand %></td>
         <td><%= funding_product.achieve_rate %></td>
         <td><%= funding_product.achieve_money %></td>
-        <td><%= funding_product.supporters_number %></td>
-        <td><%= funding_product.brand %></td>
-        <td><%= funding_product.product_detail %></td>
+		<td><%= funding_product.deadline %></td>
+        
         <td><%= link_to 'Show', funding_product %></td>
         <td><%= link_to 'Edit', edit_funding_product_path(funding_product) %></td>
         <td><%= link_to 'Destroy', funding_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -41,5 +52,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Funding Product', new_funding_product_path %>

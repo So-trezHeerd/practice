@@ -11,33 +11,33 @@
 
 <p>
   <strong>사업자 등록번호</strong>
-  <%= @sellers.registration_num %>
+  <%= @seller.registration_num %>
 </p>
 
 <p>
 	<strong>상호/법인명</strong>
-	<%= @sellers.company_name %>
+	<%= @seller.company_name %>
 </p>
 
 <p>
 	<strong>대표자명</strong>
-	<%= @sellers.ceo_name %>
+	<%= @seller.ceo_name %>
 </p>
 
 <p>
 	<strong>소재지</strong>
-	<%= @sellers.company_address %>
+	<%= @seller.company_address %>
 </p>
 
 <p>
 	<strong>대표 이메일</strong>
-	<%= @sellers.ceo_email %>
+	<%= @seller.ceo_email %>
 </p>
 
 <p>
 	<strong>대표 번호</strong>
-	<%= @sellers.ceo_num %>
+	<%= @seller.ceo_num %>
 </p>
 
 <%= link_to 'Edit', edit_seller_path(@seller) %> |
-<%= link_to 'Back', sellers_path %>
+<%= link_to 'Back', sellers_homepage_seller_path %>

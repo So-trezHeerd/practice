@@ -9,10 +9,6 @@ class SellersController < ApplicationController
   # GET /sellers/1 or /sellers/1.json
   def show
   end
-
-  def show_seller
-	  @sellers = Seller.find(params[:seller_id])
-  end
 	
   # GET /sellers/new
   def new
@@ -22,12 +18,18 @@ class SellersController < ApplicationController
   # GET /sellers/1/edit
   def edit
   end
-
+	
+  def homepage_seller
+	  @seller = Seller.find(params[:seller_id])
+  end
+	
+  def makerpage_seller
+	  @seller = Seller.find(params[:seller_id])
+  end
 
   # POST /sellers or /sellers.json
   def create
     @seller = Seller.new(seller_params)
-	  
 
     respond_to do |format|
       if @seller.save
