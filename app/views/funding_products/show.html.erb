@@ -1,49 +1,88 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @funding_product.product_id %>
-</p>
+<style>
+	#image {
+		height: 401px;
+		width: 632px;
+	}
+	
+	#left {
+		display: flex;
+	}
+	
+	#center {
+		text-align: center;
+	}
+	
+	.rate-bar {
+		border-bottom: 2px solid #00C4C4;
+	}
+	
+	.title-category{
+		color: #00C4C4
+	}
+	
+</style>
 
-<p>
-  <strong>Category:</strong>
-  <%= @funding_product.category_id %>
-</p>
+<div class = "reward-header"  style="margin: 60px 0">
+	<p class = "title-category" id="center">
+		<em><%= @funding_product.category_id %></em>
+	</p>
+	<h1 id="center"><%= @funding_product.title %></h1>
+</div>
+<div class = "reward-body-wrap">
+<div class = "sub-funding-info-contents" style="margin-left:450px; margin-right:450px;" >
+	<!--<div class = "funding_content-container" id="center">-->
+	<div class = "funding-contents" id="left" style="width:100%">
+	<div class = "sub-product-info-container" id="center" style="width:70%">
+		<div class = "product-info">
+			<div class = "tab-contents">
+				<section class = "tab-info">
+					<h3 class = "text-hidden" type="text-hidden">프로젝트 내용</h3>
+					<div class = "view-slide-wrap" style="padding: 0">
+						<div class = "view-slide-big image-slide slick-initialized slick-slider" >
+						<div aria-live="polite" class="slick-list draggable" style="height: 401px;">
+								<div class="slick-slide slick-current slick-active" id="center" style="width:632px;">
+          							<div class="img-responsive" >
+										 <%= image_tag(@funding_product.avatar.url) if @funding_product.avatar.url %>
+									</div>
+        						</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class = "right-contents-info" style="width:30%"  >
+		<h3 class = "text-hidden" input type = "hidden">프로젝트 정보</h3>
+		<div class = "product-info">
+			<div class = "state-box">
+				<h2 class = "remaining-day"><%= @funding_product.deadline %> 까지 펀딩 가능</h2>
+				<p class="rate-bar" id="center" style="width:100%"><em></em></p>
+				<p class = "achievement-rate" style = "margin-bottom: 16px;">
+					<strong> <%= @funding_product.achieve_rate %> </strong> %달성</p>
+				<p class="total-amount" style="margin-bottom: 16px;">
+					<strong> <%= @funding_product.achieve_money %> </strong> 원 펀딩</p>
+				<p class="total-supporter" style="margin-bottom: 16px;">
+					<strong> <%= @funding_product.supporters_number %> </strong> 명의 서포터</p>
+			</div>
+			<div class="btn-wrap funding"  style="color:#00C4C4">
+				<%= button_to "펀딩하기", rewards_path %>
+            </div>
+ 
+				<p>
+  				<form action='/funding_product/<%= @funding_product.id%>/user_like' method='post'>
+  					<button> 좋아요</button>  
+  				</form>
+		</div>
+		</div>
+	</div>
+	</div>
+	</div>
+<!--</div>-->
 
-<p>
-  <strong>Title:</strong>
-  <%= @funding_product.title %>
-</p>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @funding_product.deadline %>
-</p>
-
-<p>
-  <strong>Achieve rate:</strong>
-  <%= @funding_product.achieve_rate %>
-</p>
-
-<p>
-  <strong>Achieve money:</strong>
-  <%= @funding_product.achieve_money %>
-</p>
-
-<p>
-  <strong>Supporters number:</strong>
-  <%= @funding_product.supporters_number %>
-</p>
-
-<p>
-  <strong>Brand:</strong>
-  <%= @funding_product.brand %>
-</p>
-
-<p>
-  <strong>Product detail:</strong>
-  <%= @funding_product.product_detail %>
-</p>
 
 <%= link_to 'Edit', edit_funding_product_path(@funding_product) %> |
 <%= link_to 'Back', funding_products_path %>

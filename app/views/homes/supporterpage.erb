@@ -1,9 +1,133 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" style="margin-top: 0px; margin-bottom: 0px;"><%= notice %></p>
+<style>
+	#left {
+		display: flex;
+	}
+	
+	#right {
+		float: right;
+	}
+	
+	#division {
+		border-left: 1px solid #e8e6e6;
+	}
+	
+	#center {
+		text-align: center;
+	}
+	
+	.supporter-project-info {
+		border: 1px solid  #e8e6e6;
+		border-radius: 20px 20px 20px 20px/ 20px 20px 20px 20px;
+	}
+	
+	.My-page-profileBackground {
+		height: 220px;
+		width: 100%;
+		background-color: #00C4C4;
+	}
+	
+	.my-page-switch {
+		background-color: #ffffff;
+		border-radius: 12px 12px 0px 0px/ 12px 12px 0px 0px;
+	}
+	
+	.My-page-content-wrapper {
+		background-color: #ffffff;
+	}
+	
+	.go-to-supporter-page {
+		border: none;
+		background-color: #ffffff;
+		border-radius: 12px 12px 0px 0px/ 12px 12px 0px 0px;
+		
+	}
+	
+	.go-to-maker-page {
+		border: none;
+		background-color: #ffffff;	
+	}
+	
+	.go-to-maker-page {
+		border-radius: 12px 12px 0px 0px/ 12px 12px 0px 0px;
+	}
+</style>
 
-<h1>
-	서포터 페이지
-</h1>
+<div class = "MainWrapper_content">
+	<div class = "My-page" style="">
+		<div class = "My-page-profileBackground" style="position:relative; width: 100%">
+			<span style = "background-image : url(null);"></span>
+		</div>
+		<div class = "My-page-inner" style="margin-left:400px; margin-right:400px; position: relative; top: -180px;" id="center">
+			<div class = "my-page-header" style="height: 55px;">
+				<div class="my-page-switch" id="right" style=" height: 55px;"  >
+						<button data-event="supporter_mode" class="go-to-supporter-page" style=" height: 55px;">
+							<%= link_to '서포터', homes_supporterpage_path(current_user.id) %>
+						</button>
 
-<p>
-	<strong><%= link_to "나의 찜 목록", user_likes_path(current_user.id) %> </strong>
-</p>
+						<button data-event="maker_mode" class="go-to-maker-page" style="height: 55px;">
+							<%= link_to '메이커', sellers_homepage_seller_path(current_user.id) %>
+						</button>
+				</div>
+			</div>
+			<div class = "My-page-content-wrapper" style="padding-top:15px;" >
+					<div class = "My-page-supporter" id="left" style=" width:100%; padding-top: 25px;" >
+						<div class = "My-page-profile-container" style="width: 30%" >
+							<div class = "user-nickname" id = "center">
+								
+								유저 No. <%= current_user.id %><br>
+								<%= current_user.nickname %> 님<br>
+							</div>
+						</div>
+						<div class = "My-page-supporter-content" id="division" style="width: 70%;  padding-left: 32px; padding-right: 32px; padding-top: 20px;" >
+							<div class = "My-page-supporter-section"  >
+								<div class = "supporter-project-container" style="height: 318.5px; " >
+									<div class = "supporter-project-info" id="left" style="width: 100%; height: 178.5px;">
+										<div class = "supporter-funding" style="width: 25%; padding-top: 24px; padding-bottom: 24px; ">
+											<a href="" id= "center">
+												<b>
+													<h1>
+														0
+													</h1>
+												</b><br>
+												펀딩
+											</a>
+										</div>
+										<div class = "supporter-like" id="division" style="width: 25%;  padding-top: 24px; padding-bottom: 24px;" >
+											<b id= "center">
+												<h1>
+													0
+												</h1>
+											</b><br>
+											<%= link_to "나의 찜 목록", user_likes_path(current_user.id) %>
+										</div>
+										<div class = "supporter-order" id="division" style=" width: 25%;  padding-top: 24px; padding-bottom: 24px;" >
+											<a href="" id= "center">
+												<b>
+													<h1>
+														0
+													</h1>
+												</b><br>
+												구매
+											</a>
+										</div>
+										<div class = "supporter-find-startup" id="division" style="width: 25%;  padding-top: 24px; padding-bottom: 24px;" >
+											<a href="" id= "center">
+												<b>
+													<h1>
+														0
+													</h1>
+												</b><br>
+												스타트업 찾기
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+

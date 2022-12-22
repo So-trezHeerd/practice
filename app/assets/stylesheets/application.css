@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+	.web-header-container {
+		display: flex;
+		padding-left: 30px;
+	}
+	
+	.user-info-container {
+		float: right;
+	}
+
+	.user-info-container-sort{
+		display: flex;
+			
+	}
+
+	.body {
+		margin-bottom: 0px; 
+		margin-right: 0px; 
+		margin-top: 0px;
+	}
+/*body에 margin-left: -33px; 지움

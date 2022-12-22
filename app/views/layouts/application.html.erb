@@ -9,26 +9,52 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div>
-		<style type="text/css">
-			  a {text-decoration: none;}</style>
-			<td><%= link_to 'Wadiz', homes_path %></td>
-		    <td><%= link_to '펀딩', funding_products_path %></td>
-		<% if user_signed_in? %>
-		    <td><%= link_to '서포터', homes_supporterpage_path(current_user.id) %></td>
-		    <td><%= link_to '메이커', sellers_homepage_seller_path(current_user.id) %></td>
-			<%= link_to "회원정보", edit_user_registration_path %>
-			<%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
-		<% else %>
-			<%= link_to "로그인", user_session_path %>
-			<%= link_to "회원가입", "/users/sign_up" %>
-		<% end %>
+  <body class="body">
+    <div class = web-header style="height: 56px;" >
+		<div class = "web-header-container" style="width:100%">
+
+			<style type="text/css"> a {text-decoration: none;}</style>
+				<h1 class = "wadiz-logo" style="padding-left: 50px; width:10% ">	
+					<td><%= link_to 'Wadiz', homes_path %></td></h1>
+				<h1 class = "web-funding" style = "padding-left: 30px; width: 30%">
+					<td><%= link_to '펀딩', funding_products_path %></td></h1>
+				<div class = "user-info" >
+					<% if user_signed_in? %>
+					<h3 class = "user-info-container">
+						<div class = "user-info-container-sort" style="padding-left: 400px;">
+							<div class = "my-page" >
+								<td><%= link_to '마이 페이지', homes_supporterpage_path(current_user.id) %></td>
+							</div>
+		    		
+							<div class = "user-info-page" style = "padding-left: 30px;">
+								<%= link_to "회원정보", edit_user_registration_path %>
+							</div>
+							<div class = "user-logout" style = "padding-left: 30px;">
+								<%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
+							</div>
+						</div>
+					</h3>
+					<% else %>
+					<h3 class = "user-info-container">
+						<div class = "user-info-container-sort" style="padding-left: 400px;">
+							<div class = "user-info-page" style = "padding-left: 30px;">
+								<%= link_to "로그인", user_session_path %>
+							</div>
+							<div class = "user-logout" style = "padding-left: 30px;">
+								<%= link_to "회원가입", "/users/sign_up" %>
+							</div>
+						</div>
+					</h3>
+			
+					<% end %>
+				</div>
+		</div>
 	</div>
-	<hr/>
-	<%= alert %>
+	<hr/ style="margin-top: 0px; margin-bottom: 0px; ">
+	
 	<%= notice %>
-	<h2 style="font-weight: bold">마이 와디즈</h2>
+	
+	  <!--<h2 style="font-weight: bold">마이 와디즈</h2>
 	<% if user_signed_in? %>
 		<div>
 			유저 No. <%= current_user.id %><br>
@@ -37,12 +63,8 @@
 	  <form>
 	  </form>
 	<% else %>
-	<% end %>
+	<% end %>-->
 
     <%= yield %>
-	  
-	
-		
-	  
   </body>
 </html>

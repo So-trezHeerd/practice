@@ -1,4 +1,5 @@
 class UserLike < ApplicationRecord
-  belongs_to :user
-  	has_many :funding_products
+     belongs_to :user
+	 belongs_to :funding_product
+
 end

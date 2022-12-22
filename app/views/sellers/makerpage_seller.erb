@@ -1,4 +1,85 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" style="margin-top: 0px; margin-bottom: 0px;"><%= notice %></p>
+<style>
+	.MakerPageIntroduction-container {
+		
+		background-color: #00C4C4;
+	}
+	#center {
+		text-align: center;
+	}
+	#left {
+		display: flex;
+	}
+	.MakerPageIntroduction_card_1{
+		background-color:#ffffff;
+		margin-bottom:12px;
+		padding:15px 15px;
+		width:448px;
+	}
+	.MakerPageIntroduction_card_2{
+		background-color:#ffffff;
+		margin-bottom:12px;
+		padding:15px 15px;
+		width:448px;
+	}
+	.MakerPageIntroduction_card_3{
+		background-color:#ffffff;
+		margin-bottom:12px;
+		padding:15px 15px;
+		width:448px;
+	}
+	.icon{
+		margin-right: 10px;
+	}
+	
+</style>
+<div class = "MainContainer">
+	<section class = "MakerPageIntroduction-container"  style="padding-left:10px; padding-right:10px; padding-top: 15px; padding-bottom:15px">
+		<div class="MakerPageIntroduction_titleWrapper" id="center">
+			<h1 class="MakerPageIntroduction_title" >
+				<span style = "color: #ffffff">메이커 페이지</span> 
+				채우고<br>
+				더 많은 기회를 얻으세요
+			</h1>
+		</div>
+		<div class = "MakerPageIntroduction_contents"  style="width:4448px":>
+			<div class = "MakerPageIntroduction_cards" >
+				<div class="MakerPageIntroduction_card_1" id="left"  >
+					<img class = "icon"
+						 src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIvPgogICAgICAgIDxwYXRoIGQ9Ik01IDI0aDlsMS41NzEgOC42NDJBMiAyIDAgMCAxIDEzLjYwNCAzNUgxMS4xYTMgMyAwIDAgMS0yLjgyLTEuOTc1TDUgMjR6IiBmaWxsPSIjMDBBMkEyIi8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA0KSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik02IDZjLTMuOTE2IDAtNiAzLjM1OC02IDcuNUMwIDE3LjY0MiAyLjA4NCAyMSA2IDIxIiBmaWxsPSIjMDBBMkEyIi8+CiAgICAgICAgICAgIDxwYXRoIGQ9Im02IDYgNy4zNTgtLjI4QTI2LjEwMiAyNi4xMDIgMCAwIDAgMjQgM3YyMWEyNS41MTIgMjUuNTEyIDAgMCAwLTEwLjQ4MS0yLjcwN0w2IDIxVjZ6IiBmaWxsPSIjOEJFNEU0Ii8+CiAgICAgICAgICAgIDxyZWN0IGZpbGw9IiMwMEEyQTIiIHg9IjI0IiB3aWR0aD0iNiIgaGVpZ2h0PSIyNyIgcng9IjIuNSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cmVjdCBmaWxsPSIjQURCNUJEIiB4PSIzNCIgeT0iMTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz4KICAgICAgICA8cmVjdCBmaWxsPSIjQURCNUJEIiB0cmFuc2Zvcm09InJvdGF0ZSgyNSAzNSAyNS41KSIgeD0iMzIiIHk9IjI0IiB3aWR0aD0iNiIgaGVpZ2h0PSIzIiByeD0iMS41Ii8+CiAgICAgICAgPHJlY3QgZmlsbD0iI0FEQjVCRCIgdHJhbnNmb3JtPSJyb3RhdGUoLTI0IDM1IDkuNSkiIHg9IjMyIiB5PSI4IiB3aWR0aD0iNiIgaGVpZ2h0PSIzIiByeD0iMS41Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" alt="">
+					프로젝트를 오픈하면
+					<br>
+					팔로워에게 알림이 가요
+				</div>
+				<div class="MakerPageIntroduction_card_2"  id="left" >
+					<img class = "icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuMTI5IDUuNSkiPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4zOTUgMjguMTUyYy4yNjkgMCAuNTE3LS4wNjcuNzQ1LS4yLjIyNy0uMTM0LjUwMy0uMzUyLjgyOC0uNjU1bDMuNzg3LTMuNDYzYy0uMzcyLS4yOTQtLjY5Mi0uNzEtLjk2LTEuMjQ4LS4yNy0uNTM4LS40MDUtMS4zMy0uNDA1LTIuMzhWMTEuMzFjMC0xLjM1MS4yNjctMi41MTIuOC0zLjQ4MkE1LjQwMiA1LjQwMiAwIDAgMSAxNS40NjggNS42Yy45ODQtLjUxNSAyLjE1OC0uNzcyIDMuNTIyLS43NzJoOS4zNDJsLS4wMTQtLjQ1NkMyOC4yMDYgMy4wNTcgMjcuNzIgMiAyNi44NjIgMS4yIDI2LjAwNC40IDI0LjgwNCAwIDIzLjI2MyAwSDUuMDY4Yy0xLjU0MSAwLTIuNzcuNDMyLTMuNjkgMS4yOTdDLjQ2IDIuMTYgMCAzLjM3OSAwIDQuOTUyVjE3Ljg5YzAgMS41NjMuNDU3IDIuODAyIDEuMzcxIDMuNzE3LjkxNC45MTUgMi4xMzMgMS4zNzIgMy42NTUgMS4zNzJoMi4xNTh2My43OTNjMCAuNDIzLjEwNi43NTkuMzIgMS4wMDcuMjEzLjI0OS41MS4zNzMuODkuMzczeiIgZmlsbD0iIzAwQTJBMiIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMzAuMTEzIDMwYy4zOSAwIC42OTEtLjEyNi45MDUtLjM4LjIxMy0uMjUyLjMyLS41ODYuMzItMXYtMy44MDZoMS4zNzhjMS41MjIgMCAyLjc0LS40NTggMy42NTUtMS4zNzMuOTE0LS45MTUgMS4zNy0yLjE0OSAxLjM3LTMuNzAzdi04LjExYzAtMS41NzMtLjQ2LTIuNzkxLTEuMzg0LTMuNjU2LS45MjQtLjg2NC0yLjE1Ni0xLjI5Ni0zLjY5Ny0xLjI5NkgxOS4zMjNjLTEuNjA1IDAtMi44NTEuNDMyLTMuNzM4IDEuMjk2LS44ODYuODY1LTEuMzMgMi4wODgtMS4zMyAzLjY3djguMDk2YzAgMS41NjMuNDQ0IDIuOCAxLjMzIDMuNzEuODg3LjkxIDIuMTMzIDEuMzY2IDMuNzM4IDEuMzY2aDQuNDE0bDQuODAzIDQuMzNjLjMyNC4yODYuNi41LjgyOC42NDIuMjI3LjE0My40NzYuMjE0Ljc0NS4yMTR6IiBmaWxsPSIjOEJFNEU0Ii8+CiAgICAgICAgICAgIDxyZWN0IGZpbGw9IiNGOUZBRkIiIHg9IjE4LjM3MSIgeT0iMTEuNSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz4KICAgICAgICAgICAgPHJlY3QgZmlsbD0iI0Y5RkFGQiIgeD0iMTguMzcxIiB5PSIxNi41IiB3aWR0aD0iMTAiIGhlaWdodD0iMyIgcng9IjEuNSIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="">
+					수많은 투자자, 제휴처와
+					<br>
+					소통할 수 있는 기회를 얻어요
+				</div>
+				<div class="MakerPageIntroduction_card_3" id="left" >
+					<img class = "icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cmVjdCBpZD0iN2NmZGppc3NhYSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2LjIiIGhlaWdodD0iMTYuMiIgcng9IjIuNCIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS44IDMuNikiPgogICAgICAgICAgICA8bWFzayBpZD0icjRxM2kzbnJ0YiIgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiM3Y2Zkamlzc2FhIi8+CiAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgPHVzZSBmaWxsPSIjOEJFNEU0IiB4bGluazpocmVmPSIjN2NmZGppc3NhYSIvPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjMDBBMkEyIiBtYXNrPSJ1cmwoI3I0cTNpM25ydGIpIiBkPSJNMCAwaDE5LjJ2My42SDB6Ii8+CiAgICAgICAgICAgIDxnIG1hc2s9InVybCgjcjRxM2kzbnJ0YikiIGZpbGw9IiNGOUZBRkIiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS44IC45KSI+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iLjkiIGN5PSIuOSIgcj0iMSIvPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjMuNiIgY3k9Ii45IiByPSIxIi8+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iNi4zIiBjeT0iLjkiIHI9IjEiLz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjRjlGQUZCIiB4PSIxLjgiIHk9IjYuNiIgd2lkdGg9IjguNCIgaGVpZ2h0PSIxLjgiIHJ4PSIuOSIvPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjRjlGQUZCIiB4PSIxLjgiIHk9IjkuNiIgd2lkdGg9IjYiIGhlaWdodD0iMS44IiByeD0iLjkiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEuNDkgMTAuNzI3KSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjkzIDcuODcgMTIuMDYyIDExYS42LjYgMCAwIDEgMCAuODQ5bC0uMjEyLjIxMmEuNi42IDAgMCAxLS44NDkgMEw3Ljg3IDguOTNsMS4wNi0xLjA2eiIgZmlsbD0iIzAwQTJBMiIgZmlsbC1ydWxlPSJub256ZXJvIi8+CiAgICAgICAgICAgIDxjaXJjbGUgZmlsbD0iI0ZGRiIgY3g9IjUuNCIgY3k9IjUuNCIgcj0iNC44Ii8+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01LjQgMGE1LjQgNS40IDAgMSAxIDAgMTAuOEE1LjQgNS40IDAgMCAxIDUuNCAwem0wIDEuNWEzLjkgMy45IDAgMSAwIDAgNy44IDMuOSAzLjkgMCAwIDAgMC03Ljh6IiBmaWxsPSIjMDBBMkEyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" alt="">
+					포털 검색 결과에
+					<br>
+					페이지를 노출할 수 있어요
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<div class = "MakerRegisterForm" id="center">
+		<section class = "maker-register-form" style = "padding-left:10px;">
+			<h2 class = "maker-register-section-title">
+				기본 정보 입력하기
+			</h2>
+			<p class = "maker-register-section-description">
+				사업자 번호를 등록하면
+				<br>
+				편하게 기본 정보를 불러올 수 있어요
+			</p>
+		</section>
+	</div>
+</div>
 
 <h1>
 	메이커 페이지 채우고 <br><br>

@@ -13,6 +13,7 @@ class FundingProductsController < ApplicationController
   # GET /funding_products/new
   def new
     @funding_product = FundingProduct.new
+	@funding_product.seller_id_id=current_user.id
   end
 
   # GET /funding_products/1/edit
@@ -25,8 +26,11 @@ class FundingProductsController < ApplicationController
 
     respond_to do |format|
       if @funding_product.save
-        format.html { redirect_to funding_product_url(@funding_product), notice: "Funding product was successfully created." }
-        format.json { render :show, status: :created, location: @funding_product }
+		format.html { redirect_to funding_product_url(@funding_product), notice: "펀딩 오픈 성공" }
+		#format.html { redirect_to controller: 'rewards', action: 'new', id: @funding_product.id }
+		#format.html { redirect_to funding_products_rewardpage_url(funding_product_id:@funding_product.id), notice: "리워드를 추가해주세요." }
+        #format.html { redirect_to funding_products_rewardpage_url(@reward), notice: "리워드를 추가해주세요." }
+        format.json { render :show, status: :created, location: @reward.new }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @funding_product.errors, status: :unprocessable_entity }
@@ -65,6 +69,6 @@ class FundingProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def funding_product_params
-      params.require(:funding_product).permit(:product_id, :category_id, :title, :deadline, :achieve_rate, :achieve_money, :supporters_number, :brand, :product_detail)
+      params.require(:funding_product).permit(:product_id,:seller_id_id, :avatar, :category_id, :title, :deadline, :achieve_rate, :achieve_money, :supporters_number, :brand, :product_detail)
     end
 end

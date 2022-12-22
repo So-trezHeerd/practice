@@ -1,5 +1,14 @@
-<h1>New Funding Product</h1>
+<h4>펀딩 준비 > 기본 정보</h4>
+
+<h1>기본 정보</h1>
+<h3>프로젝트를 대표하는 중요한 정보들을 입력해 주세요.</h3>
 
 <%= render 'form', funding_product: @funding_product %>
 
+<span>다음단계 | </span>
+
+<%= link_to '리워드 설계하기', new_reward_path %><br>
+
+
 <%= link_to 'Back', sellers_homepage_seller_path(current_user.id) %>
+

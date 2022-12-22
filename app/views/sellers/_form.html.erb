@@ -11,7 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+<style>
+	.field{
+		text-align: center;
+	}
+	
+	.actions{
+		text-align: center;
+	}
+</style>
+
+  <!--<div class="field">
     <%= form.label :seller_id %>
     <%= form.text_field :seller_id %>
   </div>
@@ -19,35 +29,36 @@
   <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id %>
-  </div>
+  </div>-->
+
 
   <div class="field">
-    <%= form.label :registration_num %>
+	<div class = "registration_num">사업자 등록 번호</div>
     <%= form.number_field :registration_num %>
   </div>
 
   <div class="field">
-    <%= form.label :company_name %>
+	  <div class = "company_name">상호/법인 명</div>
     <%= form.text_field :company_name %>
   </div>
 
   <div class="field">
-    <%= form.label :ceo_name %>
+	  <div class = "ceo_name">대표자</div>
     <%= form.text_field :ceo_name %>
   </div>
 
   <div class="field">
-    <%= form.label :company_address %>
+	  <div class = "company_address">소재지</div>
     <%= form.text_field :company_address %>
   </div>
 
   <div class="field">
-    <%= form.label :ceo_email %>
+	  <div class = "ceo_email">대표 이메일</div>
     <%= form.text_field :ceo_email %>
   </div>
 
   <div class="field">
-    <%= form.label :ceo_num %>
+	  <div class = "ceo_num">대표 번호</div>
     <%= form.number_field :ceo_num %>
   </div>
 

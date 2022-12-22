@@ -1,0 +1,38 @@
+<h1>리워드 설계</h1>
+<h4>서포터님들에게 제공할 리워드를 입력해 주세요.</h4>
+
+<div class="FundingGuide">
+	<h4 class="FundingGuide_title">리워드 설계 조건</h4>
+	<ul class="FundingConditionGuideSection_list__2hGJ2">
+		<li class="FundingGuide_item_1">
+			<h5 class="FundingGuide_1">정렬 순서</h5>
+			<p class="FundingGuide_1_content">혜택이 좋은 순서대로 등록해 주세요.</p>
+		</li>
+		<li class="FundingGuide_item_2">
+			<h5 class="FundingGuide_2">제한 수량</h5>
+			<p class="FundingGuide_2_content">각 리워드별 제공할 수 있는 수량을 입력해 주세요. 제한된 수량이 모두 소진되면 이 리워드에 펀딩할 수 없어요.</p>
+		</li>
+		<li class="FundingGuide_item_3">
+			<h5 class="FundingGuide_3">발송 시작일</h5>
+			<div class="FundingGuide_3_contentbox">
+				<p class="FundingGuide_3_content">프로젝트 종료일로부터 11개월 이내로 설계해 주세요.</p>
+				<div color="basic" class="MessageBox">
+					<div class="MessageBox_content">
+						<ul>
+							<li>설정한 발송 기간 내 리워드가 발송되지 않으면 서포터님들이 펀딩금 반환을 신청할 수 있으니 신중하게 선택해 주세요.</li>
+							<li>프로젝트 종료일로부터 +11개월까지 발송이 시작되지 않으면 미발송 상태인 서포터님들의 펀딩금은 자동으로 반환(결제 취소)돼요.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="FundingGuide_item_4">
+			<h5 class="FundingGuide_4">옵션 조건</h5>
+			<p class="FundingGuide_4_content">사이즈, 색상 등의 옵션 설정이 필요하면 추가해 주세요.</p>
+		</li>
+	</ul>
+</div>
+
+<%= render 'form', reward: @reward %>
+
+<%= link_to 'Back', new_funding_product_path %>

@@ -11,50 +11,67 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <!--<div class="field">
     <%= form.label :product_id %>
     <%= form.text_field :product_id %>
-  </div>
-
- 
-
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
-  </div>
+  </div>-->
+  
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :seller_id_id %>
+    <%= form.text_field :seller_id_id %>
+  </div>
+
+  <div class="field">
+	<div class=funding_title>프로젝트 제목</div>
+    <!--<%= form.label :title %>-->
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :deadline %>
+	<div class=representative_image>대표 이미지</div>
+	<%= form.file_field :avatar %>
+  </div>
+
+  <div class="field">
+	<div class=funding_category>카테고리</div>
+    <!--<%= form.label :category_id %>-->
+    <%= form.text_field :category_id %>
+  </div>
+
+  <div class="field">
+	<div class=funding_deadline>프로젝트 종료일</div>
+    <!--<%= form.label :deadline %>-->
     <%= form.text_field :deadline %>
   </div>
 
   <div class="field">
-    <%= form.label :achieve_rate %>
+	<div class=funding_achieve_rate>목표 달성률</div>
+    <!--<%= form.label :achieve_rate %>-->
     <%= form.number_field :achieve_rate %>
   </div>
 
   <div class="field">
-    <%= form.label :achieve_money %>
+	<div class=funding_achieve_money>목표 달성 금액</div>
+    <!--<%= form.label :achieve_money %>-->
     <%= form.number_field :achieve_money %>
   </div>
 
   <div class="field">
-    <%= form.label :supporters_number %>
+	<div class=funding_supporters_number>펀딩 참여 서포터 수</div>
+    <!--<%= form.label :supporters_number %>-->
     <%= form.number_field :supporters_number %>
   </div>
 
   <div class="field">
-    <%= form.label :brand %>
+	<div class=funding_brand>메이커 정보</div>
+    <!--<%= form.label :brand %>-->
     <%= form.text_field :brand %>
   </div>
 
   <div class="field">
-    <%= form.label :product_detail %>
+	<div class=funding_product_detail>프로젝트 요약</div>
+    <!--<%= form.label :product_detail %>-->
     <%= form.text_field :product_detail %>
   </div>
 

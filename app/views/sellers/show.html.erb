@@ -1,44 +1,102 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" style="margin-top: 0px; margin-bottom: 0px;"><%= notice %></p>
 
-<p>
-  <strong>Seller:</strong>
-  <%= @seller.seller_id %>
-</p>
+<style>
+	#center{
+		text-align:center;
+	}
+	
+	.maker-profile-page{
+		width:770px; 
 
-<p>
-  <strong>User:</strong>
-  <%= @seller.user %>
-</p>
+		
+		margin: 0 auto;
+	}
+	.maker-profile-background {
+		
+		height:360px;
+		
+	}
+	
+	.maker-profile-background-image {
+		background-color:#00C4C4;
+		width:770px; 
+		height:360px;
+	}
+	.maker-profile-main-page{
+		height:325px;
+		background-color:#ffffff;
+		border-radius: 12px 12px 0px 0px/ 12px 12px 0px 0px;
+	}
+	.maker-base-info{
+		padding-left: 15px;
+		padding-top: 10px;
+		height:49px;
+	}
+	.maker-page-content-container{
+		height: 49px;
+		background-color:#ffffff;
+	}
+</style>
+<div style="background-color:#F9FAFB;">
+<div class = "maker-profile-page">
+	<div class = "maker-profile-page-container"  style="position:relative;" >
+		<div class = "maker-profile-background" id="center">
+			<div class = "maker-profile-background-image"> </div>
+		</div>
+	</div>
+	<div class = "maker-profile-main-page"  style="padding: 20px 20px 20px 20px; position: relative; top: -10px ;">
+		<div class = "maker-base-info">
+			<div class = "maker-title" style="height:44px;">
+				<h1>
+					<%= @seller.company_name %>
+				</h1>
+			</div>
+			<div class = "maker-tab-container" >
+			<div class = "maker-info" style=" height:40px; border-bottom: 1px solid #e8e6e6 ">
+				<h2>
+					메이커 정보
+				</h2>
+			</div>
+			<div class = "maker-info-detail" >
+				<div class = "maker-company-name">
+					<p>
+  						<strong>상호/법인 명:</strong>
+  						<%= @seller.company_name %>
+					</p>
+				</div>
+				<div class = "maker-company_number">
+					<p>
+  						<strong>대표 전화:</strong>
+  						<%= @seller.ceo_num %>
+						</p>
+				</div>
+				<div class = "ceo-email">
+					<p>
+  						<strong>대표 이메일:</strong>
+  						<%= @seller.ceo_email %>
+					</p>
+				</div>
+				<div class = "maker-registration-num"   >
+					<p>
+						<strong>사업자 등록 번호:</strong>
+  						<%= @seller.registration_num %>
+					</p>
+				</div>
+			</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+</div>
 
-<p>
-  <strong>Registration num:</strong>
-  <%= @seller.registration_num %>
-</p>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @seller.company_name %>
-</p>
 
-<p>
-  <strong>Ceo name:</strong>
-  <%= @seller.ceo_name %>
-</p>
 
-<p>
-  <strong>Company address:</strong>
-  <%= @seller.company_address %>
-</p>
 
-<p>
-  <strong>Ceo email:</strong>
-  <%= @seller.ceo_email %>
-</p>
 
-<p>
-  <strong>Ceo num:</strong>
-  <%= @seller.ceo_num %>
-</p>
 
-<%= link_to 'Edit', edit_seller_path(@seller) %> |
-<%= link_to 'Back', sellers_path %>
+<!--<%= link_to 'Edit', edit_seller_path(@seller) %> |
+<%= link_to 'Back', sellers_path %>-->

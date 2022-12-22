@@ -1,0 +1,40 @@
+<%= form_with(model: reward, local: true) do |form| %>
+  <% if reward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reward.errors.count, "error") %> prohibited this reward from being saved:</h2>
+
+      <ul>
+      <% reward.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+	<div class=reward_product_id_id>제품 id</div>
+    <%= form.text_field :product_id_id %>
+  </div>
+
+  <div class="field">
+	<div class=reward_price>금액</div>
+    <!--<%= form.label :reward_price %>-->
+    <%= form.number_field :reward_price %>
+  </div>
+
+  <div class="field">
+	<div class=reward_name>리워드명</div>
+    <!--<%= form.label :reward_name %>-->
+    <%= form.text_field :reward_name %>
+  </div>
+
+  <div class="field">
+	<div class=reward_content>리워드 설명</div>
+    <!--<%= form.label :reward_content %>-->
+    <%= form.text_field :reward_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

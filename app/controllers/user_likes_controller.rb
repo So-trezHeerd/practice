@@ -10,9 +10,22 @@ class UserLikesController < ApplicationController
   def show
   end
 
+  def like_toggle
+		like = UserLike.find_by(userid_id: current_user.id, product_id_id: params[:product_id])
+	  
+  		if like.nil?
+			UserLike.create(userid_id: current_user.id, product_id_id: params[:product_id])   
+  		else
+    		like.destroy
+  		end
+  		redirect_to '/user_likes'
+  end
+
   # GET /user_likes/new
   def new
     @user_like = UserLike.new
+	@user_like.userid_id=current_user.id
+	  
   end
 
   # GET /user_likes/1/edit
@@ -22,8 +35,10 @@ class UserLikesController < ApplicationController
   # POST /user_likes or /user_likes.json
   def create
     @user_like = UserLike.new(user_like_params)
-
-    respond_to do |format|
+    @user_like.userid_id=current_user.id
+    
+	  respond_to do |format|
+		
       if @user_like.save
         format.html { redirect_to user_like_url(@user_like), notice: "User like was successfully created." }
         format.json { render :show, status: :created, location: @user_like }
@@ -65,6 +80,6 @@ class UserLikesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_like_params
-      params.require(:user_like).permit(:user, :id_id, :product, :id_id)
+      params.permit(:userid_id, :product_id)
     end
 end

@@ -1,96 +1,111 @@
 <p id="notice"><%= notice %></p>
 
-<h1>wadiz</h1>
+<body>
+<!--슬라이드 배너칸-->
+	<div class="section">
+		<input type="radio" name="slide" id="slide01" checked>
+		<input type="radio" name="slide" id="slide02">
+		<input type="radio" name="slide" id="slide03">
 
-
-  
-
-  <tbody>
-    <% @homes.each do |home| %>
-      <tr>
-        <td><%= home.title %></td>
-        <td><%= home.content %></td>
-        <td><%= link_to 'Show', home %></td>
-        <td><%= link_to 'Edit', edit_home_path(home) %></td>
-        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<div class="RecommendationDesktop_container__3RLMb">
-	<div class="Main_wrap__2jKMu">
-		<div class="RecommendationDesktop_innerGroup__as4jB Main_innerWrap__7-_Vm">
-	<section class="SectionContainerLayout_container__1f8kt RecommendFundingWrap_container__3LDiq RecommendationDesktop_recommendFunding__1dKi1">
-<div class="title_contentWrapper__1P-q0 RecommendFundingWrap_title__1b9i3">
-	
-	<div class="RecommendFundingWrap_subTitle__1SaNL">
-		<h1>취향 맞춤 펀딩 프로젝트</h1>
-		<span class="RecommendFundingWrap_description__5xAKe">지금 함께 만드는 성공</span>
-	</div>
-</div>
-
-<div class="RecommendFundingWrap_cardListGroup__1nRxw">
-	<div class="RecommendFundingWrap_card___LnVO">
-		<div>
-			<a class="CardType_projectCard__3xhjb CardType_projectCardB__3N8ks" href="funding_products/1">
-				<article>
-					<div class="commons_thumbnail__3wYGv CardType_thumbnail__2dtTe">
-						<div class="commons_img__2UTCA commons_visible__1xTJh CardThumbnail_thumbnail__3bDBJ"> 
-							 
-						<img src = "/heattec.jpg"></img>
+		<div class="slidewrap">
+			<ul class="slidelist">
+				<li>
+					<a>
+						<!--<label for="slide03" class="left"></label>-->
+						<div class="image">
+							<img src="/slide_image01.png" 
+							 style="width: 1277px;
+									height: 371.594;">linear-gradient(to top, black, white 10%)
 						</div>
-					</div>
-					<div class="commons_content__2K1SH CardType_content__1Pavj">
-						<h1 class="commons_title__1yGWm">
-							[4만후기/앵콜] 스타일과 따뜻함을 #한장으로 히트터치 노브라티&amp;터틀넥
-						</h1>
-						<p class="commons_summary__2Ynez">
-							<span class="commons_rate__10tOH">8,701%</span>
-							패션·잡화
-						</p>
-					</div>
-					
-				</article>
-			</a>
+						<div class="textbox">
+							<h3 style="margin-bottom: 0px;
+									   margin-top: 10px;">지금만 누릴 수 있어요 <br> 72시간 한정 혜택 open</h3>
+							<p style="margin-top: 5px;">펀딩</p>
+						</div>
+						<label for="slide02" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide01" class="left"></label>
+						<a href = "/funding_products/337">
+						<div class="image">
+							<img src="/slide_image02.png" 
+							 style="width: 1277px;
+									height: 371.594;">linear-gradient(to top, black, white 10%)
+						</div>
+							</a>
+						<div class="textbox">
+							<h3 style="margin-bottom: 0px;
+									   margin-top: 10px;">2023년 새해를 위한 <br> 목표 달성 갓생템 펀딩</h3>
+							<p style="margin-top: 5px;">펀딩</p>
+						</div>
+						<label for="slide03" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide02" class="left"></label>
+						<a href = "/funding_products/338">
+						<div class="image">
+							<img src="/slide_image03.png" 
+							 style="width: 1277px;
+									height: 371.594;">linear-gradient(to top, black, white 10%)
+						</div>
+						<div class="textbox">
+							<h3 style="margin-bottom: 0px;
+									   margin-top: 10px;">최강 한파 이겨낼 <br> 따뜻한 아이템 모음</h3>
+							<p style="margin-top: 5px;">펀딩</p>
+						</div>
+						</a>
+						<label for="slide01" class="right"></label>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<div class="RecommendFundingWrap_card___LnVO">
-		<div>
-			<a class="CardType_projectCard__3xhjb CardType_projectCardB__3N8ks" href="/web/campaign/detail/165419?_refer_section_st=PersonalCurator_1">
-				<article><div class="commons_thumbnail__3wYGv CardType_thumbnail__2dtTe">
-					<div class="commons_img__2UTCA commons_visible__1xTJh CardThumbnail_thumbnail__3bDBJ" 
-						 style="background-image: url(&quot;https://cdn.wadiz.kr/wwwwadiz/green001/2022/1114/20221114091738065_165419.png/wadiz/resizecrop/216x119/format/jpg/quality/85/&quot;);">
-					</div>
-					</div>
-					<div class="commons_content__2K1SH CardType_content__1Pavj">
-						<h1 class="commons_title__1yGWm">[캐릭캐릭체인지] 진짜가 나타났다! 수호알 피규어, 아크릴 스탠드</h1>
-						<p class="commons_summary__2Ynez">
-							<span class="commons_rate__10tOH">156%</span>캐릭터·굿즈</p>
-					</div></article></a></div></div><div class="RecommendFundingWrap_card___LnVO">
-	<div>
-		<a class="CardType_projectCard__3xhjb CardType_projectCardB__3N8ks" href="/web/campaign/detail/167885?_refer_section_st=PersonalCurator_2">
-			<article>
-				<div class="commons_thumbnail__3wYGv CardType_thumbnail__2dtTe">
-					<div class="commons_img__2UTCA commons_visible__1xTJh CardThumbnail_thumbnail__3bDBJ" 
-						 style="background-image: url(&quot;https://cdn.wadiz.kr/wwwwadiz/green001/2022/1128/20221128090309034_167885.jpeg/wadiz/resizecrop/216x119/format/jpg/quality/85/&quot;);">
-					</div></div><div class="commons_content__2K1SH CardType_content__1Pavj">
-				<h1 class="commons_title__1yGWm">[1억펀딩] 밥은 풍년이 지을게요. 상만 차려주세요. 6분 30초의 기적</h1>
-				<p class="commons_summary__2Ynez">
-					<span class="commons_rate__10tOH">45,147%</span>
-					홈·리빙</p>
-				</div>
-			</article>
-		</a>
-	</div>
-</div>
 	
+<!--취향맞춤펀딩칸-->
+	<div class="RecommendFundingProduct_table">
+		<div class="RecommendFundingProduct_Title_1">
+			<h1>취향 맞춤 펀딩 프로젝트</h1>
+			<span class="RecommendFundingProduct_Title_1_description">지금 함께 만드는 성공</span>
 		</div>
-			</section>
-		</div>
+		<div class="MainCard_Home_Container">
+		  <div class="MainCard_Home_list"
+			   style="padding: 40px 100px">
+			  <% @funding_products.each do |funding_product| %>
+			  <div class="MainCard_item">
+				  <div class="MainCard_item_info">
+					  <a href = "/funding_products/<%= funding_product.id %>">
+						  <!--<img src = "/:funding_product.avatar.url"/>-->
+						  <span class="image">
+							  <p><%= image_tag("#{funding_product.avatar}") %></p>
+						  </span>
+						  <p class="MainCard_title">
+							  <strong><%= funding_product.title %></strong>
+						  </p>
+						  <div class="product_cb">
+							  <span class="product_category"><%= funding_product.category_id %></span>
+							  <span class="product_brand">| <%= funding_product.brand %></span>
+						  </div>
+						  <div>
+							  <span class="MainCard_guideline"><hr/></span>
+						  </div>
+						  <div class="achieve">
+							  <span class="achieve_rate"><%= funding_product.achieve_rate %>%</span>
+							  <span class="achieve_money"><%= funding_product.achieve_money %>원</span>
+						  </div>
+						  <div class="deadline">
+							  <span class="deadline_day"><%= funding_product.deadline %></span>
+							  <span class="deadline_daytext">까지 펀딩 가능</span>
+						  </div>
+					  </a>
+				  </div>
+			  </div>
+			  <% end %>
+		  </div>
+	  </div>
 	</div>
-</div>
 
-
+</body>

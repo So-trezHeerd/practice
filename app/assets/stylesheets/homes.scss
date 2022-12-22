@@ -1,3 +1,101 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+/*슬라이드 배너 css*/
+/* INPUT 가리기 */
+	.section input[id*="slide"] {display:none;}
+
+	/* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
+	.section .slidewrap {
+		max-width:1277px;
+		margin:0 auto;
+		overflow:hidden;}
+	.section .slidelist {
+		white-space:nowrap;
+		font-size:0;}
+	.section .slidelist > li {
+		display:inline-block;
+		vertical-align:middle;
+		width:100%;
+		transition:all .5s;}
+	.section .slidelist > li > a {
+		display:block;
+		position:relative;
+		overflow:hidden;} /* 화살표 화면 밖으로 나가면 안보이도록 OVERFLOW로 가림처리 */
+	.section .slidelist > li > a img {width:100%;}
+    .image{background: linear-gradient(to top, black, white 10%);}
+
+	/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+	.section .slidelist label {
+		position:absolute;
+		z-index:1;
+		top:50%;
+		transform:translateY(-50%);
+		padding:30px;
+		cursor:pointer;}
+	.section .slidelist .left {
+		left:-300px;
+		background:url('/left.png') center center / 100% no-repeat;} /* LEFT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
+	.section .slidelist .right {
+		right:-300px;
+		background:url('/right.png') center center / 100% no-repeat;} /* RIGHT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
+    .section .slidelist .textbox {
+		position:absolute;
+		z-index:1;
+		top:75%;
+		left:28%;
+		transform:translate(-50%,-50%);}
+	
+	.section .slidelist .textbox h3 {
+		width: 460px;
+		font-size:28px;
+		color:#ffffff;
+		opacity:0;
+		transition:all .5s;
+		line-height:40px;
+		font-weight:700;
+		margin-bottom: 6px;
+		letter-spacing: -.7px;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;}
+	.section .slidelist .textbox p {
+		font-size:13px;
+		color:#ffffff;
+		opacity:0;
+		transition:all .5s;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;}
+
+	/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-102%);}
+	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-202%);}
+
+	/* INPUT이 체크되면 변화값이 LEFT,RIGHT에 전달되는 스타일 */
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .left {left:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+/* 1번 INPUT이 체크되면 1번 슬라이드의 왼쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .right {right:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+/* 1번 INPUT이 체크되면 1번 슬라이드의 오른쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .left {left:30px;transition:all .35s ease .5s;} 
+    .section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+/* 2번 INPUT이 체크되면 1번 슬라이드의 왼쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .right {right:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+/* 2번 INPUT이 체크되면 1번 슬라이드의 오른쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .left {left:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+/* 3번 INPUT이 체크되면 1번 슬라이드의 왼쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .right {right:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+/* 3번 INPUT이 체크되면 1번 슬라이드의 오른쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
+
+	
+.RecommendFundingProduct_table{
+	padding:40px 340px;
+}

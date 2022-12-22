@@ -10,6 +10,8 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 
+gem 'mini_magick'
+gem 'carrierwave', '~>2.0'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'

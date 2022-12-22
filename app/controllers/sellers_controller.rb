@@ -13,6 +13,8 @@ class SellersController < ApplicationController
   # GET /sellers/new
   def new
     @seller = Seller.new
+	@seller.seller_id=current_user.id
+    @seller.user_id=current_user.id
   end
 
   # GET /sellers/1/edit

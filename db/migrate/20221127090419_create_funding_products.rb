@@ -5,7 +5,7 @@ class CreateFundingProducts < ActiveRecord::Migration[5.2]
       t.references :seller_id
       t.string :category_id
       t.string :title
-      t.string :deadline
+      t.date :deadline
       t.integer :achieve_rate
       t.integer :achieve_money
       t.integer :supporters_number

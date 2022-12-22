@@ -10,14 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_29_053908) do
+ActiveRecord::Schema.define(version: 2022_12_03_143727) do
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.integer "record_id", null: false
+    t.integer "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "funding_products", force: :cascade do |t|
     t.string "product_id"
     t.integer "seller_id_id"
     t.string "category_id"
     t.string "title"
-    t.string "deadline"
+    t.date "deadline"
     t.integer "achieve_rate"
     t.integer "achieve_money"
     t.integer "supporters_number"
@@ -25,6 +46,7 @@ ActiveRecord::Schema.define(version: 2022_11_29_053908) do
     t.string "product_detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["seller_id_id"], name: "index_funding_products_on_seller_id_id"
   end
 
@@ -49,6 +71,18 @@ ActiveRecord::Schema.define(version: 2022_11_29_053908) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "rewards", force: :cascade do |t|
+    t.string "reward_id"
+    t.integer "product_id_id"
+    t.string "reward_name"
+    t.string "reward_content"
+    t.integer "reward_price"
+    t.string "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id_id"], name: "index_rewards_on_product_id_id"
+  end
+
   create_table "sellers", force: :cascade do |t|
     t.string "seller_id"
     t.integer "user_id"
@@ -64,12 +98,12 @@ ActiveRecord::Schema.define(version: 2022_11_29_053908) do
   end
 
   create_table "user_likes", force: :cascade do |t|
-    t.integer "userid_id"
-    t.integer "product_id_id"
+    t.integer "user"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id_id"], name: "index_user_likes_on_product_id_id"
-    t.index ["userid_id"], name: "index_user_likes_on_userid_id"
+    t.index ["fuding_product_id"], name: "index_user_likes_on_funding_product_id"
+    t.index ["user_id"], name: "index_user_likes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
